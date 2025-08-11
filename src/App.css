@@ -1,0 +1,198 @@
+/* 배경 및 기본 폰트 - public/Img에 둘 경우 이렇게 */
+body {
+  background-image: url('/Img/back2.jpg.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 40px 0;
+  font-family: '맑은 고딕', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* 컨테이너 */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 48px;
+}
+
+/* 탭 버튼 줄 */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+
+/* 기본 상태 */
+.tab-btn {
+  padding: 8px 14px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* 기본 상태 hover */
+.tab-btn:hover {
+  background-color: #ffc6c6;
+  border-color: #bbb;
+}
+
+/* 선택(active) 상태 */
+.tab-btn.active {
+  background-color: #ffebee;    /* 연핑크 */
+  border-color: #f48fb1;        /* 진한 핑크 테두리 */
+  color: #ff6363;               /* 글자색 진핑크 */
+  font-weight: bold;
+}
+
+/* 탭 패널 표시/숨김 */
+.tab-panel[hidden] { display: none; }
+
+/* 메뉴 영역 */
+#menu { text-align: center; }
+
+#menu h1 {
+    font-size: 36px;
+    margin: 12px 0 20px;
+}
+
+/* 메뉴 아이템 묶음 */
+.menu-items {
+  border: 0.5px dashed #e4e4e4;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  margin: 0 auto;
+  gap: 12px;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+
+/* 공통 버튼 스타일 */
+.item {
+    width: 100%;
+  border: none;
+  box-shadow: none;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  display: block;
+  text-align: center;
+  
+}
+
+/* 개별 버튼 색상 */
+.item.music, .item.travel, .item.sheep { background-color: #ffe9e9; }
+.item.caramel, .item.ghost { background-color: #fff2db; }
+.item.picnic, .item.kindergarten, .item.lunch { background-color: #d3eaff; }
+
+/* 카드 기본 */
+.item {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  display: block;
+  text-align: center;
+}
+
+/* 🔹 비율 고정: 4:3 (정사각형 원하면 1 / 1 로 바꿔) */
+.item .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+.item .thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;   /* 꽉 채우며 비율 유지 */
+}
+
+/* 결제 영역 */
+#cart, h3, p { text-align: center; }
+
+/* 버튼 그룹 */
+.btn-group {
+  text-align: center;
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn.gray { background-color: #cdcdcd; }
+.btn.pink { background-color: #ff9d9d; }
+
+/* 장바구니 행(원래 JS에서 인라인이던 스타일을 클래스로 분리) */
+.cart-row {
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    align-items: center;
+    gap: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px 16px;
+  width: clamp(320px, 90%, 400px);
+  margin: 8px auto; /* 가운데 정렬 */
+  background: #fff;
+  white-space: nowrap;
+}
+
+.qty-btn {
+  width: 40px; 
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+
+/* 컨테이너에 화살표/상태바용 레일 만들기 */
+.mySwiper {
+  height: 360px;
+  width: 600px;
+  max-width: 92vw;
+  margin: 0 auto;
+
+  padding: 0 0 44px;            /* ⬅︎⬅︎ 좌우 레일 + 아래 상태바 공간 */
+  position: relative;
+  overflow: visible;               /* 혹시 몰라 안전망 */
+}
+
+/* 카드가 화살표와 닿지 않게 살짝 안쪽 패딩 */
+.mySwiper .swiper-slide {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+
+/* 상태바는 아래 레일 안쪽으로 */
+.mySwiper .swiper-pagination { bottom: 12px; }
+
