@@ -6,20 +6,20 @@ import ProductSwiper from './components/ProductSwiper';
 // 가장 쉬운 사용을 위해 public/Img 기준 경로 사용
 const ITEMS = [
   // 단품
-  { id: 'music',        name: '뮤지션 실바니안',        price: 13000, img: './public/Img/music.jpg.avif',       cat: 'single',  cls: 'music' },
-  { id: 'travel',       name: '여행자 실바니안',        price: 11000, img: './public/Img/travel.jpg.avif',      cat: 'single',  cls: 'travel' },
-  { id: 'sheep',        name: '양 실바니안',            price: 15000, img: './public/Img/sheep.jpg',            cat: 'single',  cls: 'sheep' },
-  { id: 'dog',        name: '리트리버 실바니안',            price: 15000, img: './public/Img/dog.jpg.avif',            cat: 'single',  cls: 'sheep' },
-  { id: 'baby',        name: '흔들목마 실바니안',            price: 25000, img: './public/Img/baby.jpg',            cat: 'single',  cls: 'sheep' },
+  { id: 'music',        name: '뮤지션 실바니안',        price: 13000, img: 'Img/music.jpg.avif',       cat: 'single',  cls: 'music' },
+  { id: 'travel',       name: '여행자 실바니안',        price: 11000, img: 'Img/travel.jpg.avif',      cat: 'single',  cls: 'travel' },
+  { id: 'sheep',        name: '양 실바니안',            price: 15000, img: 'Img/sheep.jpg',            cat: 'single',  cls: 'sheep' },
+  { id: 'dog',        name: '리트리버 실바니안',            price: 15000, img: 'Img/dog.jpg.avif',            cat: 'single',  cls: 'sheep' },
+  { id: 'baby',        name: '흔들목마 실바니안',            price: 25000, img: 'Img/baby.jpg',            cat: 'single',  cls: 'sheep' },
 
   // 한정판
-  { id: 'caramel',      name: '(한정판) 카라멜 실바니안', price: 22000, img: './public/Img/caramel.jpg',          cat: 'limited', cls: 'caramel' },
-  { id: 'ghost',        name: '(한정판) 유령 실바니안',   price: 25000, img: './public/Img/ghostcat.jpg.webp',    cat: 'limited', cls: 'ghost' },
+  { id: 'caramel',      name: '(한정판) 카라멜 실바니안', price: 22000, img: 'Img/caramel.jpg',          cat: 'limited', cls: 'caramel' },
+  { id: 'ghost',        name: '(한정판) 유령 실바니안',   price: 25000, img: 'Img/ghostcat.jpg.webp',    cat: 'limited', cls: 'ghost' },
 
   // 세트
-  { id: 'picnic',       name: '피크닉 세트',             price: 40700, img: './public/Img/picnic.jpg',           cat: 'set',     cls: 'picnic' },
-  { id: 'kindergarten', name: '유치원 세트',             price: 50700, img: './public/Img/kindergarten.jpg',     cat: 'set',     cls: 'kindergarten' },
-  { id: 'lunch',        name: '패밀리 오후 세트',        price: 51700, img: './public/Img/lunch.jpg',            cat: 'set',     cls: 'lunch' },
+  { id: 'picnic',       name: '피크닉 세트',             price: 40700, img: 'Img/picnic.jpg',           cat: 'set',     cls: 'picnic' },
+  { id: 'kindergarten', name: '유치원 세트',             price: 50700, img: 'Img/kindergarten.jpg',     cat: 'set',     cls: 'kindergarten' },
+  { id: 'lunch',        name: '패밀리 오후 세트',        price: 51700, img: 'Img/lunch.jpg',            cat: 'set',     cls: 'lunch' },
 ];
 
 const fmt = (n) => n.toLocaleString('ko-KR');
